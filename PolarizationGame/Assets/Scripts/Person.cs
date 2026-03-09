@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {
+    [SerializeField] List<Person> people;
     public float tolerance;
     public float openness;
     public float racism;
@@ -18,5 +19,19 @@ public class Person : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("person"))
+        {
+            people.Add(collision.gameObject.GetComponent<Person>());
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("person"))
+        {
+            people.Remove(collision.gameObject.GetComponent<Person>());
+        }
     }
 }
