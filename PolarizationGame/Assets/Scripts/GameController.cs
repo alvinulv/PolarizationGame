@@ -15,4 +15,12 @@ public class GameController : MonoBehaviour
     {
         
     }
+    public void Next()
+    {
+
+    }
+    public void LeaveGame()
+    {
+        Application.Quit();
+    }
 }
