@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
     }
     public void Next()
     {
+        for (int i = 0; i < people.Length; i++)
+            people[i].Change();
         float levelScore = 0;
         if (levels[CurrentLevel].AllSeatsTaken())
         {

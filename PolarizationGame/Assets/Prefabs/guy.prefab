@@ -47,11 +47,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   people: []
-  tolerance: 0
-  openness: 0
-  racism: 0
-  conspiracy: 0
-  baseValue: 0
+  tolerance: 1
+  openness: 5
+  racism: 1
+  conspiracy: 1
+  baseValue: 1
+  face: 0
 --- !u!58 &8159910178440055388
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -86,7 +87,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.1
+  m_Radius: 1.4
 --- !u!50 &3905557742390635414
 Rigidbody2D:
   serializedVersion: 4

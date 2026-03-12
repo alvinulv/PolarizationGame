@@ -49,9 +49,14 @@ public class Person : MonoBehaviour
     }
     public void Change()
     {
+        Debug.Log("Changing");
         DeepCopy();
         for (int i = 0; i < preople.Count; i++)
         {
+            Debug.Log("Racism + " + preople[i].racism * openness);
+            Debug.Log("Tolerance + " + preople[i].tolerance * openness);
+            Debug.Log("Openness + " + preople[i].openness * openness);
+            Debug.Log("Conspiracy + " + preople[i].conspiracy * openness);
             racism += preople[i].racism * openness;
             tolerance += preople[i].tolerance * openness;
             conspiracy += preople[i].openness * openness;
