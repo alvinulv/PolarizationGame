@@ -60,6 +60,18 @@ PrefabInstance:
       propertyPath: c.r
       value: 0.754717
       objectReference: {fileID: 0}
+    - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
+      propertyPath: sad
+      value: 
+      objectReference: {fileID: 21300000, guid: 13acaa647e3fccf40a13468ddebfa549, type: 3}
+    - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
+      propertyPath: happy
+      value: 
+      objectReference: {fileID: 21300000, guid: aa18c1f38619d3a4e83e1e8e73b8da95, type: 3}
+    - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
+      propertyPath: neutral
+      value: 
+      objectReference: {fileID: 21300000, guid: c2ce003db4f32544b8051cf19225fa3d, type: 3}
     - target: {fileID: 1320388164026055179, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: m_Name
       value: big guy

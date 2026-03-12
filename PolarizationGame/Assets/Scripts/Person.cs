@@ -9,7 +9,6 @@ public class Person : MonoBehaviour
     public float tolerance;
     public float openness;
     public float racism;
-    public float conspiracy;
     [SerializeField] float baseValue;
     public bool face;
     // Start is called before the first frame update
@@ -32,6 +31,7 @@ public class Person : MonoBehaviour
             {
                 c -= racism/tolerance;
             }
+            c += racism - people[i].racism;
         }
         return c;
     }
@@ -42,7 +42,6 @@ public class Person : MonoBehaviour
         {
             preople.Add(new Person());
             preople[i].racism = people[i].racism;
-            preople[i].conspiracy = people[i].conspiracy;
             preople[i].openness = people[i].openness;
             preople[i].tolerance = people[i].tolerance;
         }
@@ -56,10 +55,8 @@ public class Person : MonoBehaviour
             Debug.Log("Racism + " + preople[i].racism * openness);
             Debug.Log("Tolerance + " + preople[i].tolerance * openness);
             Debug.Log("Openness + " + preople[i].openness * openness);
-            Debug.Log("Conspiracy + " + preople[i].conspiracy * openness);
             racism += preople[i].racism * openness;
             tolerance += preople[i].tolerance * openness;
-            conspiracy += preople[i].openness * openness;
             openness += preople[i].openness * openness;
             if (preople[i].face != face)
                 racism = racism / openness;
