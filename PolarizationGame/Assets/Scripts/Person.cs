@@ -9,6 +9,7 @@ public class Person : MonoBehaviour
     public float openness;
     public float racism;
     public float conspiracy;
+    [SerializeField] float baseValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,15 @@ public class Person : MonoBehaviour
     void Update()
     {
         
+    }
+    public float Contentedness()
+    {
+        float c = baseValue;
+        for (int i = 0; i < people.Count; i++)
+        {
+
+        }
+        return c;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
