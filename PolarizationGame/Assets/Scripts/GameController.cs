@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < people.Length; i++)
             {
                 levelScore += people[i].Contentedness();
+                people[i].Change();
             }
             totalScore += levelScore;
             levels[CurrentLevel].levelObject.SetActive(false);
