@@ -50,8 +50,8 @@ MonoBehaviour:
   p: {fileID: 9217781456823229424}
   tolerance: 1
   openness: 1
-  racism: 5
-  baseValue: 3
+  racism: 1
+  baseValue: 1
   face: 0
 --- !u!58 &8159910178440055388
 CircleCollider2D:
@@ -482,8 +482,8 @@ MonoBehaviour:
   sad: {fileID: 21300000, guid: cf0ce59dc8ac1774f897a3a3ca9add88, type: 3}
   neutral: {fileID: 21300000, guid: 84cece29fb8332c4fa137afd563fb0a4, type: 3}
   happy: {fileID: 21300000, guid: 73a0fc72c2484d049aab0e69c14f1f26, type: 3}
-  sadbelow: 2
-  happyabove: 5
+  sadbelow: 0
+  happyabove: 2
 --- !u!1 &3755975849347398132
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e100412bc52d03d4897f2c5f568cef73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pos: {x: 0, y: 0, z: 0}
+  dragon: 0
 --- !u!58 &4290796930726042153
 CircleCollider2D:
   m_ObjectHideFlags: 0
