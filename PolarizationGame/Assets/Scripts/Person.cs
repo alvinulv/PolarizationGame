@@ -47,7 +47,7 @@ public class Person : MonoBehaviour
         }
         return c*tolerance;
     }
-    void DeepCopy()
+    public void DeepCopy()
     {
         r.Clear();
         o.Clear();
@@ -62,7 +62,6 @@ public class Person : MonoBehaviour
     public void Change()
     {
         Debug.Log("Changing");
-        DeepCopy();
         for (int i = 0; i < people.Count; i++)
         {
             Debug.Log("Racism + " + r[i] * openness);
