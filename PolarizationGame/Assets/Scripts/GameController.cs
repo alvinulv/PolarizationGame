@@ -34,15 +34,16 @@ public class GameController : MonoBehaviour
         {
             if (levels[CurrentLevel].AllSeatsTaken() && scoreScreen.activeInHierarchy == false)
             {
-                Debug.Log("nextlvl");
                 for (int i = 0; i < people.Length; i++)
                 {
                     levelScore += people[i].Contentedness();
-                    people[i].Change();
+                    people[i].DeepCopy();
                 }
-                for (int i = 0; i < people.Length; i++)
+                for (int j = 0; j < people.Length; j++)
                 {
-                    people[i].BackToStart();
+                    Debug.Log("lllll");
+                    people[j].Change();
+                    people[j].BackToStart();
                 }
                 totalScore += levelScore;
                 levels[CurrentLevel].levelObject.SetActive(false);
@@ -53,7 +54,6 @@ public class GameController : MonoBehaviour
             }
             else if (scoreScreen.activeInHierarchy == true)
             {
-                Debug.Log("nextlvlactually");
                 CurrentLevel++;
                 scoreScreen.SetActive(false);
                 levels[CurrentLevel].levelObject.SetActive(true);
@@ -64,7 +64,6 @@ public class GameController : MonoBehaviour
         {
             if (levels[CurrentLevel].AllSeatsTaken() && scoreScreen.activeInHierarchy == false)
             {
-                Debug.Log("nextlvlfinal");
                 for (int i = 0; i < people.Length; i++)
                 {
                     levelScore += people[i].Contentedness();
