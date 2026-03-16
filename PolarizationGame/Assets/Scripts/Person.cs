@@ -32,18 +32,14 @@ public class Person : MonoBehaviour
     }
     public float Contentedness()
     {
-        float c = baseValue;
+        float c = 0;
         for (int i = 0; i < people.Count; i++)
         {
             if (face != people[i].face)
             {
                 c -= racism / tolerance;
             }
-            else
-            {
-                c += racism;
-            }
-            c += racism - people[i].racism;
+            c += baseValue;
         }
         return c*tolerance;
     }
@@ -58,28 +54,28 @@ public class Person : MonoBehaviour
             o.Add(people[i].openness);
             t.Add(people[i].tolerance);
         }
-        BackToStart();
     }
     public void Change()
     {
-        Debug.Log("Changing");
+        //racism = racism*Contentedness();
         for (int i = 0; i < people.Count; i++)
         {
-            Debug.Log("Racism + " + r[i] * openness);
-            Debug.Log("Tolerance + " + t[i] * openness);
-            Debug.Log("Openness + " + o[i]);
-            racism += (r[i] * openness)/people.Count;
-            tolerance += (t[i] * openness)/ people.Count;
-            openness += (o[i])/ people.Count;
             if (people[i].face != face)
-                racism = racism / openness;
+            {
+                racism -= openness;
+            }
+            racism += r[i]/(people.Count+1);
         }
-        BackToStart();
     }
     public void BackToStart()
     {
         p.transform.position = startPos;
         p.GetComponent<Drag>().pos = startPos;
+    }
+    public string Dialogue()
+    {
+
+        return "a";
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -95,4 +91,5 @@ public class Person : MonoBehaviour
             people.Remove(collision.gameObject.GetComponent<Person>());
         }
     }
+    
 }
