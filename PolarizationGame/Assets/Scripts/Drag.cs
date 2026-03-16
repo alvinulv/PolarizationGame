@@ -7,6 +7,7 @@ public class Drag : MonoBehaviour
 {
     Camera _camera;
     public Vector3 pos;
+    public bool dragon;
     Vector3 destination;
     Vector3 relativePos;
     // Start is called before the first frame update
@@ -28,11 +29,13 @@ public class Drag : MonoBehaviour
             }
             if (relativePos.magnitude < 10.01f)
             {
+                dragon = true;
                 transform.position = mouse + relativePos;
             }
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            dragon = false;
             if (destination == new Vector3(0,0,0))
             {
                 transform.position = pos;

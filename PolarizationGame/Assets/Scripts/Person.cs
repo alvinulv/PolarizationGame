@@ -65,12 +65,12 @@ public class Person : MonoBehaviour
         Debug.Log("Changing");
         for (int i = 0; i < people.Count; i++)
         {
-            /*Debug.Log("Racism + " + r[i] * openness);
+            Debug.Log("Racism + " + r[i] * openness);
             Debug.Log("Tolerance + " + t[i] * openness);
-            Debug.Log("Openness + " + o[i] * openness);*/
-            racism += r[i] * openness;
-            tolerance += t[i] * openness;
-            openness += o[i] * openness;
+            Debug.Log("Openness + " + o[i]);
+            racism += (r[i] * openness)/people.Count;
+            tolerance += (t[i] * openness)/ people.Count;
+            openness += (o[i])/ people.Count;
             if (people[i].face != face)
                 racism = racism / openness;
         }
