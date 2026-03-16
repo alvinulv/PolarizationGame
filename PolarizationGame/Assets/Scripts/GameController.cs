@@ -41,7 +41,6 @@ public class GameController : MonoBehaviour
                 }
                 for (int j = 0; j < people.Length; j++)
                 {
-                    Debug.Log("lllll");
                     people[j].Change();
                     people[j].BackToStart();
                 }
@@ -67,7 +66,6 @@ public class GameController : MonoBehaviour
                 for (int i = 0; i < people.Length; i++)
                 {
                     levelScore += people[i].Contentedness();
-                    people[i].Change();
                 }
                 for (int i = 0; i < people.Length; i++)
                 {
