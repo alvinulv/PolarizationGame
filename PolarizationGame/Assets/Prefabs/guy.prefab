@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   people: []
-  parent: {fileID: 9217781456823229424}
+  p: {fileID: 9217781456823229424}
   tolerance: 1
-  openness: 5
-  racism: 1
+  openness: 1
+  racism: 5
   baseValue: 3
   face: 0
 --- !u!58 &8159910178440055388

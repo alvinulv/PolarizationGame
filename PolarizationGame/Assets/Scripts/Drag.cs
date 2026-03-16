@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Drag : MonoBehaviour
 {
     Camera _camera;
-    Vector3 pos;
+    public Vector3 pos;
     Vector3 destination;
     Vector3 relativePos;
     // Start is called before the first frame update

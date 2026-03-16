@@ -5,7 +5,7 @@ using UnityEngine;
 public class Person : MonoBehaviour
 {
     [SerializeField] List<Person> people;
-    [SerializeField] GameObject parent;
+    [SerializeField] GameObject p;
     List<float> r;
     List<float> t;
     List<float> o;
@@ -21,7 +21,7 @@ public class Person : MonoBehaviour
         r = new List<float>();
         t = new List<float>();
         o = new List<float>();
-        startPos = parent.transform.position;
+        startPos = p.transform.position;
     }
 
     // Update is called once per frame
@@ -58,26 +58,28 @@ public class Person : MonoBehaviour
             o.Add(people[i].openness);
             t.Add(people[i].tolerance);
         }
+        BackToStart();
     }
     public void Change()
     {
         Debug.Log("Changing");
         for (int i = 0; i < people.Count; i++)
         {
-            Debug.Log("Racism + " + r[i] * openness);
+            /*Debug.Log("Racism + " + r[i] * openness);
             Debug.Log("Tolerance + " + t[i] * openness);
-            Debug.Log("Openness + " + o[i] * openness);
+            Debug.Log("Openness + " + o[i] * openness);*/
             racism += r[i] * openness;
             tolerance += t[i] * openness;
             openness += o[i] * openness;
             if (people[i].face != face)
                 racism = racism / openness;
         }
+        BackToStart();
     }
     public void BackToStart()
     {
-
-        parent.transform.position = startPos;
+        p.transform.position = startPos;
+        p.GetComponent<Drag>().pos = startPos;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
