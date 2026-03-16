@@ -18,6 +18,9 @@ public class Person : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        r = new List<float>();
+        t = new List<float>();
+        o = new List<float>();
         startPos = transform.position;
     }
 
@@ -72,10 +75,8 @@ public class Person : MonoBehaviour
         }
     }
     public void BackToStart()
-    {
-        
+    {  
         parent.transform.position = startPos;
-        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
