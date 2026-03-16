@@ -69,7 +69,7 @@ public class Person : MonoBehaviour
     }
     public void BackToStart()
     {
-        transform.position = startPos;
+        transform.parent.position = startPos;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
