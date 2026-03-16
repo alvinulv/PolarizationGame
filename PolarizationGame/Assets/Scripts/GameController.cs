@@ -12,8 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] int CurrentLevel;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] GameObject scoreScreen;
-    [SerializeField] GameObject finalScoreScreen;
-    [SerializeField] TMP_Text finalScoreText;
+    [SerializeField] TMP_Text nextButtonText;
     float totalScore = 0;
     bool inBetween = false;
 
@@ -31,42 +30,57 @@ public class GameController : MonoBehaviour
     {
 
         float levelScore = 0;
-        if (CurrentLevel < levels.Length)
+        if ((CurrentLevel + 1) < levels.Length)
         {
             if (levels[CurrentLevel].AllSeatsTaken() && scoreScreen.activeInHierarchy == false)
             {
+                Debug.Log("nextlvl");
                 for (int i = 0; i < people.Length; i++)
                 {
                     levelScore += people[i].Contentedness();
                     people[i].Change();
                 }
+                for (int i = 0; i < people.Length; i++)
+                {
+                    people[i].BackToStart();
+                }
                 totalScore += levelScore;
                 levels[CurrentLevel].levelObject.SetActive(false);
-                CurrentLevel++;
+                
                 scoreText.text = "Score for this stage: " + levelScore.ToString();
                 scoreScreen.SetActive(true);
+                nextButtonText.text = "Next Level";
             }
             else if (scoreScreen.activeInHierarchy == true)
             {
+                Debug.Log("nextlvlactually");
+                CurrentLevel++;
                 scoreScreen.SetActive(false);
                 levels[CurrentLevel].levelObject.SetActive(true);
+                nextButtonText.text = "Complete";
             }
         }
         else
         {
-            if (levels[CurrentLevel].AllSeatsTaken() && finalScoreScreen.activeInHierarchy == false)
+            if (levels[CurrentLevel].AllSeatsTaken() && scoreScreen.activeInHierarchy == false)
             {
+                Debug.Log("nextlvlfinal");
                 for (int i = 0; i < people.Length; i++)
                 {
                     levelScore += people[i].Contentedness();
                     people[i].Change();
                 }
+                for (int i = 0; i < people.Length; i++)
+                {
+                    people[i].BackToStart();
+                }
                 totalScore += levelScore;
                 levels[CurrentLevel].levelObject.SetActive(false);
-                finalScoreText.text = "Score for this stage: " + levelScore.ToString() + "\nTotal Score: " + totalScore.ToString();
-                finalScoreScreen.SetActive(true);
+                scoreText.text = "Score for this stage: " + levelScore.ToString() + "\nTotal Score: " + totalScore.ToString();
+                scoreScreen.SetActive(true);
+                nextButtonText.text = "Try Again";
             }
-            else if (finalScoreScreen.activeInHierarchy == true)
+            else if (scoreScreen.activeInHierarchy == true)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
