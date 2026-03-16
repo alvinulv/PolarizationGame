@@ -11,10 +11,11 @@ public class Person : MonoBehaviour
     public float racism;
     [SerializeField] float baseValue;
     public bool face;
+    public Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -27,13 +28,17 @@ public class Person : MonoBehaviour
         float c = baseValue;
         for (int i = 0; i < people.Count; i++)
         {
-            if(face != people[i].face)
+            if (face != people[i].face)
             {
-                c -= racism/tolerance;
+                c -= racism / tolerance;
+            }
+            else
+            {
+                c += racism;
             }
             c += racism - people[i].racism;
         }
-        return c;
+        return c*tolerance;
     }
     void DeepCopy()
     {
