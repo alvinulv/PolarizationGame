@@ -21,13 +21,14 @@ public class Person : MonoBehaviour
         r = new List<float>();
         t = new List<float>();
         o = new List<float>();
-        startPos = transform.position;
+        startPos = parent.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Escape))
+            BackToStart();
     }
     public float Contentedness()
     {
@@ -75,7 +76,8 @@ public class Person : MonoBehaviour
         }
     }
     public void BackToStart()
-    {  
+    {
+
         parent.transform.position = startPos;
     }
     private void OnCollisionEnter2D(Collision2D collision)
