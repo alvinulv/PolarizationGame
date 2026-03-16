@@ -5,7 +5,10 @@ using UnityEngine;
 public class Person : MonoBehaviour
 {
     [SerializeField] List<Person> people;
-    List<Person> preople;
+    [SerializeField] GameObject parent;
+    List<float> r;
+    List<float> t;
+    List<float> o;
     public float tolerance;
     public float openness;
     public float racism;
@@ -42,34 +45,37 @@ public class Person : MonoBehaviour
     }
     void DeepCopy()
     {
-        preople.Clear();
+        r.Clear();
+        o.Clear();
+        t.Clear();
         for (int i = 0; i < people.Count; i++)
         {
-            preople.Add(new Person());
-            preople[i].racism = people[i].racism;
-            preople[i].openness = people[i].openness;
-            preople[i].tolerance = people[i].tolerance;
+            r.Add(people[i].racism);
+            o.Add(people[i].openness);
+            t.Add(people[i].tolerance);
         }
     }
     public void Change()
     {
         Debug.Log("Changing");
         DeepCopy();
-        for (int i = 0; i < preople.Count; i++)
+        for (int i = 0; i < people.Count; i++)
         {
-            Debug.Log("Racism + " + preople[i].racism * openness);
-            Debug.Log("Tolerance + " + preople[i].tolerance * openness);
-            Debug.Log("Openness + " + preople[i].openness * openness);
-            racism += preople[i].racism * openness;
-            tolerance += preople[i].tolerance * openness;
-            openness += preople[i].openness * openness;
-            if (preople[i].face != face)
+            Debug.Log("Racism + " + r[i] * openness);
+            Debug.Log("Tolerance + " + t[i] * openness);
+            Debug.Log("Openness + " + o[i] * openness);
+            racism += r[i] * openness;
+            tolerance += t[i] * openness;
+            openness += o[i] * openness;
+            if (people[i].face != face)
                 racism = racism / openness;
         }
     }
     public void BackToStart()
     {
-        transform.parent.position = startPos;
+        
+        parent.transform.position = startPos;
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
