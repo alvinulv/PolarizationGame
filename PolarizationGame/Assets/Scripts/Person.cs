@@ -11,7 +11,7 @@ public class Person : MonoBehaviour
     public float racism;
     [SerializeField] float baseValue;
     public bool face;
-    public Vector3 startPos;
+    Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +66,10 @@ public class Person : MonoBehaviour
             if (preople[i].face != face)
                 racism = racism / openness;
         }
+    }
+    public void BackToStart()
+    {
+        transform.position = startPos;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
