@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject scoreScreen;
     [SerializeField] TMP_Text nextButtonText;
     float totalScore = 0;
-    bool inBetween = false;
 
     void Start()
     {

@@ -50,10 +50,6 @@ public class TextBubble : MonoBehaviour
             float finalY = bubbleY;
             noTriBubble.position = new Vector3(bubbleX, bubbleY, 0);
 
-
-            Debug.Log(bubble.transform.position.x + noTriBubble.position.x);
-            Debug.Log(bubble.transform.position.y + noTriBubble.position.y);
-
             if ((bubble.transform.position.x + bubbleCamCheck.position.x) < -8.88f)
             {
                 finalX = -bubbleX;
