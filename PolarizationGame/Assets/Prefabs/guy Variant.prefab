@@ -92,7 +92,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: big guy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7471029133032260727, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

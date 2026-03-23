@@ -12,6 +12,7 @@ public class score : MonoBehaviour
     void Start()
     {
         t = GetComponent<TMP_Text>();
+        t.color = person.transform.parent.GetComponentInChildren<SpriteRenderer>().color;
     }
 
     // Update is called once per frame

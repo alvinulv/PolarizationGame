@@ -313,7 +313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &92641179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1357,19 +1357,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[0].b
-      value: 0.14509803
+      value: 0.72156864
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[0].g
-      value: 1
+      value: 0.14509805
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[0].r
-      value: 0.36138928
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[1].b
@@ -1445,15 +1445,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[7].b
-      value: 0.37254903
+      value: 0.16402629
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[7].g
-      value: 0.83137256
+      value: 0.8962264
       objectReference: {fileID: 0}
     - target: {fileID: 4345446928068186278, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: colors.Array.data[7].r
-      value: 0
+      value: 0.49083778
       objectReference: {fileID: 0}
     - target: {fileID: 7070637764887303351, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: racism
@@ -2269,7 +2269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &580434898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2894,7 +2894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &697379378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4617,19 +4617,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[0].b
-      value: 0.14509803
+      value: 0.72156864
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[0].g
-      value: 1
+      value: 0.14509805
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[0].r
-      value: 0.20860425
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[1].b
@@ -4705,15 +4705,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[7].b
-      value: 0.24705882
+      value: 0.16402629
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[7].g
-      value: 0.23921569
+      value: 0.8962264
       objectReference: {fileID: 0}
     - target: {fileID: 1234749786823155425, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: colors.Array.data[7].r
-      value: 0.8
+      value: 0.49083778
       objectReference: {fileID: 0}
     - target: {fileID: 3755975849347398132, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: m_Name
@@ -5680,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1241180634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6420,7 +6420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1496618713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6912,7 +6912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1589233050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7616,7 +7616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1792159326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9029,7 +9029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2041572404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9037,7 +9037,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041572403}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9046,7 +9046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -370, y: 200}
+  m_AnchoredPosition: {x: -369.99994, y: 200.00012}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041572405
@@ -9529,7 +9529,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1955003888}
-  - {fileID: 818509066}
   - {fileID: 248910568}
   - {fileID: 1875110750}
   - {fileID: 467657355}
@@ -9540,3 +9539,4 @@ SceneRoots:
   - {fileID: 2037676594}
   - {fileID: 1479280092}
   - {fileID: 2122730183}
+  - {fileID: 818509066}

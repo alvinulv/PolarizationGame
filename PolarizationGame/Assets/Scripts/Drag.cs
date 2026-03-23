@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,12 +9,13 @@ public class Drag : MonoBehaviour
     Camera _camera;
     public Vector3 pos;
     public bool dragon;
-    Vector3 destination;
+    List<Vector3> destinations;
     Vector3 relativePos;
     // Start is called before the first frame update
     void Start()
     {
         _camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        destinations = new List<Vector3>();
     }
 
     // Update is called once per frame
@@ -36,30 +38,42 @@ public class Drag : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             dragon = false;
-            if (destination == new Vector3(0,0,0))
+            if (destinations.Count == 0)
             {
                 transform.position = pos;
             }
-            else transform.position = destination;
+            else
+            {
+                
+                Vector3 d = destinations[0];
+                for (int i = 1; i < destinations.Count; i++)
+                {
+                    Vector3 di = transform.position-destinations[i];
+                    Vector3 ff = transform.position - d;
+                    if (di.magnitude <ff.magnitude)
+                        d = destinations[i];
+                }
+                transform.position = d;
+
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Seat"))
+        GameObject seat = collision.gameObject;
+        if (seat.CompareTag("Seat") && seat.GetComponent<Seat>().occupant == null)
         {
-            if (collision.gameObject.GetComponent<Seat>().occupant == null)
-            {
-                destination = collision.gameObject.transform.position;
-                collision.gameObject.GetComponent<Seat>().occupant = gameObject;
-            }
+            destinations.Add(seat.transform.position);
+            seat.GetComponent<Seat>().occupant = gameObject;
         }       
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Seat") && collision.gameObject.GetComponent<Seat>().occupant == gameObject)
+        GameObject seat = collision.gameObject;
+        if (seat.CompareTag("Seat") && seat.GetComponent<Seat>().occupant == gameObject)
         {
-            collision.gameObject.GetComponent<Seat>().occupant = null;
-            destination = new Vector3(0, 0, 0);
+            seat.GetComponent<Seat>().occupant = null;
+            destinations.Remove(seat.transform.position);
         }
     }
 }

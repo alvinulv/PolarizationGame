@@ -35,13 +35,13 @@ public class Person : MonoBehaviour
         float c = 0;
         for (int i = 0; i < people.Count; i++)
         {
-            if (face != people[i].face)
+            if (racism > 0&&face != people[i].face)
             {
                 c -= racism / tolerance;
             }
             c += baseValue;
         }
-        return c*tolerance;
+        return c;
     }
     public void DeepCopy()
     {
@@ -75,7 +75,7 @@ public class Person : MonoBehaviour
     public string Dialogue()
     {
 
-        return "a";
+        return "ø";
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
