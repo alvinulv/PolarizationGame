@@ -44,17 +44,13 @@ public class Drag : MonoBehaviour
             }
             else
             {
-                
-                Vector3 d = destinations[0];
+                Vector3 temp = destinations[0];
                 for (int i = 1; i < destinations.Count; i++)
                 {
-                    Vector3 di = transform.position-destinations[i];
-                    Vector3 ff = transform.position - d;
-                    if (di.magnitude <ff.magnitude)
-                        d = destinations[i];
+                    if (Vector3.Distance(transform.position, destinations[i]) < Vector3.Distance(transform.position, temp))
+                        temp = destinations[i];
                 }
-                transform.position = d;
-
+                transform.position = temp;
             }
         }
     }

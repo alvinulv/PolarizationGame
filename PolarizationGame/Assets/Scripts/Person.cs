@@ -38,6 +38,7 @@ public class Person : MonoBehaviour
             if (racism > 0&&face != people[i].face)
             {
                 c -= racism / tolerance;
+                c -= people[i].racism/tolerance;
             }
             c += baseValue;
         }
@@ -57,15 +58,27 @@ public class Person : MonoBehaviour
     }
     public void Change()
     {
+        int others = 0;
+        int sames = 0;
         //racism = racism*Contentedness();
         for (int i = 0; i < people.Count; i++)
         {
             if (people[i].face != face)
+            others++;
+            else sames++;
+            /*if (people[i].face != face)
             {
                 racism -= openness;
             }
-            racism += r[i]/(people.Count+1);
+            racism += r[i]/(people.Count);*/
         }
+        if (others > 0 && sames > 0)
+        {
+            racism -= openness;
+            if (sames < 2)
+                racism-=openness;
+        }
+        else racism += sames;
     }
     public void BackToStart()
     {
