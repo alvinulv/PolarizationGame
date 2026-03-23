@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
@@ -10,7 +11,9 @@ public class TextBubble : MonoBehaviour
     [SerializeField] GameObject triangleRight;
     [SerializeField] RectTransform noTriBubble;
     [SerializeField] GameObject bubble;
-    
+    [SerializeField] TMP_Text bubbleText;
+
+    Person p;
     Drag drag;
     Camera _camera;
     Vector3 pos;
@@ -27,6 +30,7 @@ public class TextBubble : MonoBehaviour
         bubbleY = noTriBubble.position.y - transform.position.y;
         _camera = GameObject.Find("Main Camera").GetComponent<Camera>();
         drag = GetComponent<Drag>();
+        p = GetComponentInChildren<Person>();
     }
 
     void Update()
@@ -36,6 +40,9 @@ public class TextBubble : MonoBehaviour
         relativePos = pos - mouse;
         if (relativePos.magnitude < 10.01f && !drag.dragon && !toggle)
         {
+
+            bubbleText.text = p.Dialogue();
+
             triangleLeft.SetActive(true);
             triangleRight.SetActive(false);
 
