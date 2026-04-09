@@ -49,7 +49,7 @@ MonoBehaviour:
   people: []
   p: {fileID: 9217781456823229424}
   tolerance: 2
-  openness: 0.5
+  openness: 0.25
   racism: 1
   baseValue: 1
   face: 0
