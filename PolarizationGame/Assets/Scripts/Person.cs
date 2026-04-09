@@ -92,7 +92,7 @@ public class Person : MonoBehaviour
                 if (others == 1)
                 {
                     if (sames == 0)
-                        return "I don't trust this guy at all!";
+                        return "I don't trust this guy";
                     if (face)
                         return "I'm not comfortable with the small faced guy";
                     else return "I'm not comfortable with the big faced guy";
