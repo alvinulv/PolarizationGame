@@ -15,6 +15,8 @@ public class Person : MonoBehaviour
     [SerializeField] float baseValue;
     public bool face;
     Vector3 startPos;
+    int others = 0;
+    int sames = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,20 +60,7 @@ public class Person : MonoBehaviour
     }
     public void Change()
     {
-        int others = 0;
-        int sames = 0;
-        //racism = racism*Contentedness();
-        for (int i = 0; i < people.Count; i++)
-        {
-            if (people[i].face != face)
-            others++;
-            else sames++;
-            /*if (people[i].face != face)
-            {
-                racism -= openness;
-            }
-            racism += r[i]/(people.Count);*/
-        }
+        othersameupdate();
         if (others > 0 && sames > 0)
         {
             racism -= openness;
@@ -87,8 +76,36 @@ public class Person : MonoBehaviour
     }
     public string Dialogue()
     {
-
-        return "ø";
+        othersameupdate();
+        if (Contentedness() >= 2)
+        {
+            return "I love all of my friends";
+        }   
+        if (others > 0)
+        {
+            if (racism > 3)
+                if (!face)
+                    return "I don't like Biggers";
+                else return "I don't like them smalls";
+            if (racism > 0)
+            {
+                if (others == 1)
+                {
+                    if (sames == 0)
+                        return "I don't trust this guy at all!";
+                    if (face)
+                        return "I'm not comfortable with the small faced guy";
+                    else return "I'm not comfortable with the big faced guy";
+                }
+                if (sames == 0)
+                {
+                    return "I'm scared of these guys!";
+                }
+            }
+        }
+        if (others == 0 && sames == 0)
+            return "I'm lonely";
+        return "I don't have enough friends";
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -104,5 +121,21 @@ public class Person : MonoBehaviour
             people.Remove(collision.gameObject.GetComponent<Person>());
         }
     }
-    
+    void othersameupdate()
+    {
+        others = 0;
+        sames = 0;
+        //racism = racism*Contentedness();
+        for (int i = 0; i < people.Count; i++)
+        {
+            if (people[i].face != face)
+                others++;
+            else sames++;
+            /*if (people[i].face != face)
+            {
+                racism -= openness;
+            }
+            racism += r[i]/(people.Count);*/
+        }
+    }
 }
