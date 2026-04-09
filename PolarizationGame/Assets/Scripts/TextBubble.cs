@@ -38,7 +38,7 @@ public class TextBubble : MonoBehaviour
         Vector3 mouse = _camera.ScreenToWorldPoint(Input.mousePosition);
         pos = transform.position;
         relativePos = pos - mouse;
-        if (relativePos.magnitude < 10.01f && !drag.dragon && !toggle)
+        if (relativePos.magnitude < 10.01f && !drag.dragon && !toggle && transform.position.y < 4)
         {
 
             bubbleText.text = p.Dialogue();
