@@ -48,6 +48,7 @@ public class Person : MonoBehaviour
     }
     public void DeepCopy()
     {
+        //this might actually be useless
         r.Clear();
         o.Clear();
         t.Clear();
