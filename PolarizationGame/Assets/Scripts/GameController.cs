@@ -29,7 +29,9 @@ public class GameController : MonoBehaviour
         {
             i.color = Color.green;
         }
-        else i.color = Color.white;
+        else if (scoreScreen.activeInHierarchy == true)
+            i.color = Color.white;
+        else i.color = Color.red;
     }
     public void Next()
     {

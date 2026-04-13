@@ -115,7 +115,7 @@ public class Person : MonoBehaviour
     {
         if (startR < racism)
         {
-            if (Random.Range(0,1)== 1)
+            if (Random.Range(0,2)== 1)
             return "They're not so bad";
             return "Maybe I had a caricature in my head";
         }
