@@ -8743,6 +8743,7 @@ MonoBehaviour:
   CurrentLevel: 0
   scoreText: {fileID: 1415975472}
   scoreScreen: {fileID: 1415975470}
+  nextButton: {fileID: 1008449755}
   nextButtonText: {fileID: 1400196074}
 --- !u!4 &1875110750
 Transform:

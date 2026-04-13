@@ -17,6 +17,7 @@ public class Person : MonoBehaviour
     Vector3 startPos;
     int others = 0;
     int sames = 0;
+    float startR;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +62,7 @@ public class Person : MonoBehaviour
     }
     public void Change()
     {
+        startR = racism;
         othersameupdate();
         if (others > 0 && sames > 0)
         {
@@ -69,6 +71,7 @@ public class Person : MonoBehaviour
                 racism-=openness;
         }
         else racism += sames;
+        ChangeDialogue();
     }
     public void BackToStart()
     {
@@ -107,6 +110,32 @@ public class Person : MonoBehaviour
         if (others == 0 && sames == 0)
             return "I'm lonely";
         return "I don't have enough friends";
+    }
+    public string ChangeDialogue()
+    {
+        if (startR < racism)
+        {
+            if (Random.Range(0,1)== 1)
+            return "They're not so bad";
+            return "Maybe I had a caricature in my head";
+        }
+        else if (startR == racism)
+        {
+            if (Random.Range(0, 1) == 1)
+            {
+                if (face)
+                    return "The small faced guys were mean. I prefer my friends";
+                return "The big faced guys were mean. I prefer my friends";
+            }
+            return "They were about as nice as I expected them to be";
+        }
+        else if (startR> racism)
+        {
+            if (face)
+                return "It's not natural to have a small face";
+            else return "People with big faces are violent. I don't want them here";
+        }
+        return "ERROR";
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

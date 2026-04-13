@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -12,18 +13,23 @@ public class GameController : MonoBehaviour
     [SerializeField] int CurrentLevel;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] GameObject scoreScreen;
+    [SerializeField] GameObject nextButton;
     [SerializeField] TMP_Text nextButtonText;
     float totalScore = 0;
-
+    Image i;
     void Start()
     {
-        
+        i = nextButton.GetComponent<Image>();
     }
 
     
     void Update()
     {
-        
+        if (levels[CurrentLevel].AllSeatsTaken())
+        {
+            i.color = Color.green;
+        }
+        else i.color = Color.white;
     }
     public void Next()
     {
