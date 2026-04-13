@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class PersonChangeBubble : MonoBehaviour
 {
-    [SerializeField] Person person;
-    TMP_Text text;
-
+    [SerializeField] GameObject person;
+    [SerializeField] TMP_Text text;
+        
 
 
 
     void Start()
     {
-        text = GetComponent<TMP_Text>();
-    }
 
-    private void Awake()
+    }
+    private void OnEnable()
     {
-        //text.text = person.ChangeDialouge();
+        text.text = person.GetComponent<Person>().ChangeDialogue();
+        Debug.Log("aahhh");
     }
 
     void Update()
