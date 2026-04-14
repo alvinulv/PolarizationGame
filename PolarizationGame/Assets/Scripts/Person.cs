@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Person : MonoBehaviour
 {
@@ -113,27 +114,64 @@ public class Person : MonoBehaviour
     }
     public string ChangeDialogue()
     {
-        if (startR < racism)
+        if (startR == 0)
         {
-            if (Random.Range(0,2)== 1)
-            return "They're not so bad";
-            return "Maybe I had a caricature in my head";
+            //No racism
+            switch (Random.Range(0, 4))
+            {
+                case 0: return "Why shouldn't we all be friends?";
+                case 1: if (face)
+                        return "I love my small faced friends";
+                    else return "Biggas are cool";
+                case 2: return "faceism is actually so stupid";
+                        default: return "I don't get why some small and big faces hate eachother";
+            }
+        }    
+        if (startR > racism)
+        {
+            //Less racism
+            switch(Random.Range(0,3))
+            {
+                case 0: return "Maybe I had a caricature in my head";
+                case 1: if (face)
+                        return "The small faced guy was actually pretty chill";
+                    else return "The big faced guy was actually pretty chill";
+                        default: return "They're not so bad";
+            }
         }
-        else if (startR == racism)
+        if (startR == racism)
         {
-            if (Random.Range(0, 1) == 1)
+            //No change
+            if (Random.Range(0, 2) == 1)
             {
                 if (face)
-                    return "The small faced guys were mean. I prefer my friends";
-                return "The big faced guys were mean. I prefer my friends";
+                    return "The small guys were scary. I prefer my friends";
+                return "The big faced guys were scary. I prefer my friends";
             }
-            return "They were about as nice as I expected them to be";
+            return "They were what I expected them to be";
         }
-        else if (startR> racism)
+        if (startR< racism)
         {
             if (face)
-                return "It's not natural to have a small face";
-            else return "People with big faces are violent. I don't want them here";
+            {
+                //More racism
+                switch (Random.Range(0, 3))
+                {
+                    case 0: return "The people with small faces are not like us";
+                    case 1: return "Smalls can't be trusted";
+                    default: return "It's not natural to have a small face";
+                }
+            }
+            else
+            {
+                switch (Random.Range(0, 3))
+                {
+                    case 0: return "Problem is we're not allowed to criticize biggers";
+                    case 1: return "#ProudFaceist";
+                    default: return "People with big faces are violent. I don't want them here";
+                }
+                
+            }
         }
         return "ERROR";
     }
