@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: 200}
+  m_AnchoredPosition: {x: -169.5, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &92641180
@@ -3725,6 +3725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5725030616761998064, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
+      propertyPath: diaIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9217781456823229424, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: m_Name
       value: little guy 3
@@ -3985,7 +3989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104, y: 200}
+  m_AnchoredPosition: {x: 81.8, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580434899
@@ -4089,7 +4093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fc017cc5b98344e8eff8bca4d50ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 1146088327}
+  person: {fileID: 1482955150}
 --- !u!222 &580434901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4249,6 +4253,10 @@ PrefabInstance:
     - target: {fileID: 3755975849347398132, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: m_Name
       value: guy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725030616761998064, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
+      propertyPath: diaIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9217781456823229424, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: m_Name
@@ -4615,7 +4623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103, y: 200}
+  m_AnchoredPosition: {x: -84, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697379379
@@ -4719,7 +4727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fc017cc5b98344e8eff8bca4d50ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 1590865227}
+  person: {fileID: 464885837}
 --- !u!222 &697379381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6150,7 +6158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 192.99995, y: 200}
+  m_AnchoredPosition: {x: 168.7, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241180635
@@ -7467,6 +7475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: big guy 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7070637764887303351, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
+      propertyPath: diaIndex
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7599,7 +7611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -281, y: 200}
+  m_AnchoredPosition: {x: -258.3, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496618714
@@ -7703,7 +7715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fc017cc5b98344e8eff8bca4d50ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 1482955150}
+  person: {fileID: 1146088327}
 --- !u!222 &1496618716
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8564,7 +8576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 284.99994, y: 200}
+  m_AnchoredPosition: {x: 262, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589233051
@@ -8668,7 +8680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fc017cc5b98344e8eff8bca4d50ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 464885837}
+  person: {fileID: 1590865227}
 --- !u!222 &1589233053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8760,6 +8772,10 @@ PrefabInstance:
     - target: {fileID: 5944951563425797559, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: m_Name
       value: big guy 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070637764887303351, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
+      propertyPath: diaIndex
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10077,6 +10093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guy
       objectReference: {fileID: 0}
+    - target: {fileID: 5725030616761998064, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
+      propertyPath: diaIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9217781456823229424, guid: e0d785c3d6296b74094308ec682a5e9c, type: 3}
       propertyPath: m_Name
       value: little guy 4
@@ -10192,7 +10212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370.99994, y: 200}
+  m_AnchoredPosition: {x: 352.3, y: 200}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792159327
@@ -10583,6 +10603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: big guy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7070637764887303351, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
+      propertyPath: diaIndex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10895,6 +10919,10 @@ PrefabInstance:
     - target: {fileID: 5944951563425797559, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
       propertyPath: m_Name
       value: big guy 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070637764887303351, guid: 4275037aef2d7dd46a7791f9410acb22, type: 3}
+      propertyPath: diaIndex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12088,7 +12116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.99994, y: 200.00012}
+  m_AnchoredPosition: {x: -351.3, y: 200.00012}
   m_SizeDelta: {x: 84.3064, y: 42.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041572405
@@ -12455,7 +12483,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1955003888}
   - {fileID: 248910568}
-  - {fileID: 1875110750}
   - {fileID: 818509066}
   - {fileID: 1852115984}
   - {fileID: 1146088326}
@@ -12465,3 +12492,4 @@ SceneRoots:
   - {fileID: 600982199}
   - {fileID: 1590865226}
   - {fileID: 1710913960}
+  - {fileID: 1875110750}

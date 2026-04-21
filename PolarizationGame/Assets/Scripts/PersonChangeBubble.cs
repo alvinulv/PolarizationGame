@@ -18,7 +18,6 @@ public class PersonChangeBubble : MonoBehaviour
     private void OnEnable()
     {
         text.text = person.GetComponent<Person>().ChangeDialogue();
-        Debug.Log("aahhh");
     }
 
     void Update()

@@ -49,10 +49,11 @@ MonoBehaviour:
   people: []
   p: {fileID: 9217781456823229424}
   tolerance: 2
-  openness: 0.25
+  openness: 0.5
   racism: 1
   baseValue: 1
   face: 0
+  diaIndex: 0
 --- !u!58 &8159910178440055388
 CircleCollider2D:
   m_ObjectHideFlags: 0
