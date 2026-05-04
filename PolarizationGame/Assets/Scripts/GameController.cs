@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject scoreScreen;
     [SerializeField] GameObject nextButton;
     [SerializeField] TMP_Text nextButtonText;
+    [SerializeField] TMP_Text levelText;
     float totalScore = 0;
     Image i;
     void Start()
@@ -89,7 +90,7 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-
+        levelText.text = "Level " + (CurrentLevel+1);
     }
     public void StartLevel()
     {

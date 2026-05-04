@@ -99,7 +99,7 @@ public class Drag : MonoBehaviour
             }
             else if (seat.GetComponent<Seat>().occupant != gameObject)
             {
-                Debug.Log("asudha");
+                //Debug.Log("asudha");
                 swaps.Add(seat.GetComponent<Seat>().occupant);
             }
         }
