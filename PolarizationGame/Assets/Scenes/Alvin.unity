@@ -5800,7 +5800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &893969239
 Transform:
   m_ObjectHideFlags: 0
@@ -6410,14 +6410,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelObject: {fileID: 1728212793}
   levelSeats:
+  - {fileID: 83817062}
+  - {fileID: 2015694734}
+  - {fileID: 1683509758}
+  - {fileID: 705245898}
+  - {fileID: 139365677}
+  - {fileID: 1132196684}
+  - {fileID: 1960270088}
   - {fileID: 507164807}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1098069412
 Transform:
   m_ObjectHideFlags: 0
@@ -11443,7 +11443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1728212794
 Transform:
   m_ObjectHideFlags: 0
