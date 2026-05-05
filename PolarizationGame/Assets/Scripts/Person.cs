@@ -9,7 +9,6 @@ public class Person : MonoBehaviour
     [SerializeField] List<Person> people;
     [SerializeField] GameObject p;
     List<float> r;
-    public float tolerance;
     public float openness;
     public float racism;
     [SerializeField] float baseValue;
@@ -37,10 +36,14 @@ public class Person : MonoBehaviour
         float c = 0;
         for (int i = 0; i < people.Count; i++)
         {
-            if (racism > 0&&face != people[i].face)
+            if (face != people[i].face)
             {
-                c -= racism / tolerance;
-                c -= people[i].racism/tolerance;
+                if (racism > 0)
+                {
+                    c -= racism;
+                   
+                }
+                c -= people[i].racism;
             }
             c += baseValue;
         }
@@ -90,9 +93,11 @@ public class Person : MonoBehaviour
     public string Dialogue()
     {
         othersameupdate();
-        if (Contentedness() >= 2)
+        if (Contentedness() > 0)
         {
-            return "I love all of my friends";
+            if (others + sames > 1)
+                return "I love all of my friends";
+            else return "I love my friend";
         }   
         if (others > 0)
         {
@@ -115,11 +120,17 @@ public class Person : MonoBehaviour
                     return "I'm scared of these guys!";
                 }
             }
+            if (racism <0.2f && Contentedness() < 0)
+            {
+                if (!face)
+                    return "The guy with the big face doesn't like me";
+                else return "The guy with the small face doesn't like me";
+            }
         }
         if (others == 0 && sames == 0)
             return "I'm lonely";
-        if (others == 0)
-            return "I don't have enough friends";
+        /*if (others == 0)
+            return "I don't have enough friends";*/
         else return "There aren't enough people I can relate to here";
     }
     public string ChangeDialogue()

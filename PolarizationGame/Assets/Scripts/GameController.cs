@@ -81,7 +81,7 @@ public class GameController : MonoBehaviour
                 }
                 totalScore += levelScore;
                 levels[CurrentLevel].levelObject.SetActive(false);
-                scoreText.text = "Score for this stage: " + levelScore.ToString() + "\nTotal Score: " + totalScore.ToString();
+                scoreText.text = "Score for this stage: " + levelScore.ToString() + "\nTotal Score: " + totalScore.ToString()+"\nPossible Total Score: 70";
                 scoreScreen.SetActive(true);
                 nextButtonText.text = "Try Again";
             }

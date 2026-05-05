@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   people: []
   p: {fileID: 9217781456823229424}
-  tolerance: 2
   openness: 0.5
   racism: 1
   baseValue: 1
@@ -88,7 +87,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.15
 --- !u!50 &3905557742390635414
 Rigidbody2D:
   serializedVersion: 4
@@ -400,7 +399,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0025, y: 0.0025, z: 0}
-  m_LocalScale: {x: 0.54275405, y: 0.54275405, z: 0.54}
+  m_LocalScale: {x: 0.37499997, y: 0.37499997, z: 0.37309715}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4446012675696594495}
@@ -474,7 +473,7 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 84cece29fb8332c4fa137afd563fb0a4, type: 3}
   happy: {fileID: 21300000, guid: 73a0fc72c2484d049aab0e69c14f1f26, type: 3}
   sadbelow: 0
-  happyabove: 2
+  happyabove: 0
 --- !u!1 &2021944637276802245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1020,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3840, y: 2160}
-  m_Pivot: {x: 0.50522906, y: 0.5154934}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7252784630180398050
 Canvas:
   m_ObjectHideFlags: 0
@@ -1150,7 +1149,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 0.74999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6000380134561355156}

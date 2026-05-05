@@ -35,9 +35,9 @@ public class Spriteguy : MonoBehaviour
             }
             else sprite.color = Color.white;
 
-            if (p.Contentedness() <= sadbelow)
+            if (p.Contentedness() < sadbelow)
                 sprite.sprite = sad;
-            else if (p.Contentedness() >= happyabove)
+            else if (p.Contentedness() > happyabove)
                 sprite.sprite = happy;
             else sprite.sprite = neutral;
         

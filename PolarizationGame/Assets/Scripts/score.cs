@@ -18,6 +18,7 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        t.text = person.racism.ToString();
+        //t.text = person.racism.ToString();
+        t.text = person.Contentedness().ToString();
     }
 }
