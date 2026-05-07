@@ -24,23 +24,22 @@ public class Spriteguy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-            Vector3 relativePos = transform.position - cam.ScreenToWorldPoint(Input.mousePosition);
-            if (relativePos.magnitude < 10.01f)
-            {
-                sprite.color = Color.yellow;
-                if (Input.GetMouseButton(0))
-                    sprite.color = Color.green;
-            }
-            else sprite.color = Color.white;
-
+        Vector3 relativePos = transform.position - cam.ScreenToWorldPoint(Input.mousePosition);
+        if (relativePos.magnitude < 10.01f)
+        {
+            sprite.color = Color.yellow;
+            if (Input.GetMouseButton(0))
+                sprite.color = Color.green;
+        }
+        else sprite.color = Color.white;
+        if (transform.position.y < 3)
+        {
+            //Debug.Log(transform.position.y);
             if (p.Contentedness() < sadbelow)
                 sprite.sprite = sad;
             else if (p.Contentedness() > happyabove)
                 sprite.sprite = happy;
             else sprite.sprite = neutral;
-        
-
+        }
     }
 }

@@ -32,11 +32,12 @@ public class Drag : MonoBehaviour
                 //takes the starting position, and finds the relative position of the smiley to the mouse
                 pos = transform.position;
                 relativePos = pos - mouse;
+                if (relativePos.magnitude < 10.01f)
+                    dragon = true;
             }
-            if (relativePos.magnitude < 10.01f)
+            if (dragon)
             {
                 //moves the smiley if the mouse is close enough
-                dragon = true;
                 transform.position = mouse + relativePos;
             }
         }
@@ -45,14 +46,18 @@ public class Drag : MonoBehaviour
             dragon = false;
             if (destinations.Count == 0 && swaps.Count== 0)
             {
+                //if it doesn't go anywhere
                 transform.position = pos;
             }
             else
             {
+                
                 Vector3 temp = Vector3.zero;
                 int temp2 = 0;
+                // if there are empty chairs to go to
                 if (destinations.Count>0)
                 {
+                    //it finds the closest chair
                     temp = destinations[0];
                     for (int i = 1; i < destinations.Count; i++)
                     {
@@ -60,14 +65,17 @@ public class Drag : MonoBehaviour
                             temp = destinations[i];
                     }
                 }
+                //if there are filled chairs to go to
                 if (swaps.Count >0)
-                {;
+                {
+                    //it finds the closest swap
                     for (int i = 1; i < swaps.Count; i++)
                     {
                         if (Vector3.Distance(transform.position, swaps[i].transform.position) < Vector3.Distance(transform.position, swaps[temp2].transform.position))
                             temp2 = i;
                     }
                 }
+                //if there are swaps it check to see if it should replace temp with one of them
                 if (swaps.Count != 0)
                 {
                     if(destinations.Count == 0|| Vector3.Distance(transform.position, temp) > Vector3.Distance(transform.position, swaps[temp2].transform.position))

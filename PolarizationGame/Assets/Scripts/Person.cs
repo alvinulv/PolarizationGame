@@ -9,7 +9,6 @@ public class Person : MonoBehaviour
     [SerializeField] List<Person> people;
     [SerializeField] GameObject p;
     List<float> r;
-    public float openness;
     public float racism;
     [SerializeField] float baseValue;
     public bool face;
@@ -40,10 +39,10 @@ public class Person : MonoBehaviour
             {
                 if (racism > 0)
                 {
-                    c -= racism;
+                    c -= racism*2;
                    
                 }
-                c -= people[i].racism;
+                //c -= people[i].racism;
             }
             c += baseValue;
         }
@@ -65,7 +64,7 @@ public class Person : MonoBehaviour
         if (others > 0 && sames > 0)
         {
             //racism = racism / 2;
-            racism -= openness;
+            racism -= 0.5f;
             /*if (sames < 2)
                 racism-=openness;*/
         }
@@ -93,7 +92,7 @@ public class Person : MonoBehaviour
     public string Dialogue()
     {
         othersameupdate();
-        if (Contentedness() > 0)
+        if (Contentedness() > 1)
         {
             if (others + sames > 1)
                 return "I love all of my friends";
@@ -101,7 +100,7 @@ public class Person : MonoBehaviour
         }   
         if (others > 0)
         {
-            if (racism > 2)
+            if (racism > 3)
                 if (!face)
                     return "I don't like Biggers";
                 else return "I don't like them smalls";
@@ -120,12 +119,12 @@ public class Person : MonoBehaviour
                     return "I'm scared of these guys!";
                 }
             }
-            if (racism <0.2f && Contentedness() < 0)
+            /*if (racism <0.2f && Contentedness() <= 0)
             {
                 if (!face)
                     return "The guy with the big face doesn't like me";
                 else return "The guy with the small face doesn't like me";
-            }
+            }*/
         }
         if (others == 0 && sames == 0)
             return "I'm lonely";

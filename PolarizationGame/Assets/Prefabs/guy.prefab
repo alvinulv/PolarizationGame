@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   people: []
   p: {fileID: 9217781456823229424}
-  openness: 0.5
   racism: 1
   baseValue: 1
   face: 0
@@ -473,7 +472,7 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 84cece29fb8332c4fa137afd563fb0a4, type: 3}
   happy: {fileID: 21300000, guid: 73a0fc72c2484d049aab0e69c14f1f26, type: 3}
   sadbelow: 0
-  happyabove: 0
+  happyabove: 1
 --- !u!1 &2021944637276802245
 GameObject:
   m_ObjectHideFlags: 0
